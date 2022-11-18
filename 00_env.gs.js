@@ -7,12 +7,23 @@ function createEnv() {
 
   // this can be modified simply adding new source schemas to the object "raw_data_env"
   const raw_data_env = [
+//     {
+//       name: % SOURCE NAME %
+//       tracker_link: % LINK TO TRACKER RAW DATA GOOGLE DOC %
+//       source_link: % LINK TO SOURCE RAW DATA GOOGLE DOC %
+//       tracker_campaign_name: % NUMBER OF COLUMN FOR CAMPAIGN NAMES IN TRACKER GOOGLE DOC %
+//       tracker_convertions: % NUMBER OF COLUMN FOR CONVERTIONS SUM IN TRACKER GOOGLE DOC %
+//       tracker_revenue: % NUMBER OF COLUMN FOR REVENUE SUM IN TRACKER GOOGLE DOC %
+//       source_campaign_name: % NUMBER OF COLUMN FOR CAMPAIGN NAMES IN SOURCE GOOGLE DOC %
+//       source_cost: % NUMBER OF COLUMN FOR COST SUM IN SOURCE GOOGLE DOC %
+//       source_installs: % NUMBER OF COLUMN FOR INSTALLS SUM IN SOURCE GOOGLE DOC %
+//     }, 
     {
       name: "tiktok",
       tracker_link: tech_list.getRange(1,6).getValue(),
       source_link: tech_list.getRange(3,6).getValue(),
-      tracker_campaign_name: 1, // numbers for each column in raw tracker/source excel docs
-      tracker_convertions: 2, // could be modified on raw docs modification
+      tracker_campaign_name: 1, 
+      tracker_convertions: 2, 
       tracker_revenue: 3,
       source_campaign_name: 1,
       source_cost: 4,
