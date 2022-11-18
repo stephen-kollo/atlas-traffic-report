@@ -12,7 +12,7 @@ function createEnv() {
       tracker_link: tech_list.getRange(1,6).getValue(),
       source_link: tech_list.getRange(3,6).getValue(),
       tracker_campaign_name: 1, // numbers for each column in raw tracker/source excel docs
-      tracker_convertions: 2,
+      tracker_convertions: 2, // could be modified on raw docs modification
       tracker_revenue: 3,
       source_campaign_name: 1,
       source_cost: 4,
