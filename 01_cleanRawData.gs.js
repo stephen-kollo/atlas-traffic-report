@@ -75,12 +75,3 @@ function cleanData(raw_traffic_data) {
   console.log("..raw traffic data cleaned")
   return cleaned_data
 }
-
-
-
-
-
-
-
-
-
