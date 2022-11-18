@@ -11,7 +11,7 @@ function createEnv() {
       name: "tiktok",
       tracker_link: tech_list.getRange(1,6).getValue(),
       source_link: tech_list.getRange(3,6).getValue(),
-      tracker_campaign_name: 1,
+      tracker_campaign_name: 1, // numbers for each column in raw tracker/source excel docs
       tracker_convertions: 2,
       tracker_revenue: 3,
       source_campaign_name: 1,
