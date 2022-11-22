@@ -1,0 +1,57 @@
+
+.back {
+  background: #e2e2e2;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.div-center {
+  width: 700px;
+  height: 90%;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: auto;
+  padding: 1em 2em;
+  border-bottom: 2px solid #ccc;
+  display: table;
+}
+
+div.content {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.line {
+  display: inline-block;
+  border-top: 1px solid #e8e8e8;
+  margin-bottom: 10px;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.section-title {
+  margin-bottom: 10px;
+}
+.show-settings-button {
+  color: gray;
+  border: none;
+  background: #e8e8e8;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.form-group {
+  margin-bottom: 10px;
+}
+.settings-table {
+  display: none;
+  margin-bottom: 20px;
+}
