@@ -1,58 +1,55 @@
-function createEnv() {
+function createEnv(settings_sheets) {
   console.log("========= TRAFFIC REPORT SCRIPT IS RUNNING =========")
   console.log("------- Creating Env -------")
-  const tech_list = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Tech"); 
 
-  const validation_data = getValidationData(tech_list)
+  const validation_data = getValidationData(settings_sheets)
+  const source_data = getSourceData(settings_sheets.getSheetByName("Sources"))
 
-  // this can be modified simply adding new source schemas to the object "raw_data_env"
-  const raw_data_env = [
-//     {
-//       name: % SOURCE NAME %
-//       tracker_link: % LINK TO TRACKER RAW DATA GOOGLE DOC %
-//       source_link: % LINK TO SOURCE RAW DATA GOOGLE DOC %
-//       tracker_campaign_name: % NUMBER OF COLUMN FOR CAMPAIGN NAMES IN TRACKER GOOGLE DOC %
-//       tracker_convertions: % NUMBER OF COLUMN FOR CONVERTIONS SUM IN TRACKER GOOGLE DOC %
-//       tracker_revenue: % NUMBER OF COLUMN FOR REVENUE SUM IN TRACKER GOOGLE DOC %
-//       source_campaign_name: % NUMBER OF COLUMN FOR CAMPAIGN NAMES IN SOURCE GOOGLE DOC %
-//       source_cost: % NUMBER OF COLUMN FOR COST SUM IN SOURCE GOOGLE DOC %
-//       source_installs: % NUMBER OF COLUMN FOR INSTALLS SUM IN SOURCE GOOGLE DOC %
-//     }, 
-    {
-      name: "tiktok",
-      tracker_link: tech_list.getRange(1,6).getValue(),
-      source_link: tech_list.getRange(3,6).getValue(),
-      tracker_campaign_name: 1, 
-      tracker_convertions: 2, 
-      tracker_revenue: 3,
-      source_campaign_name: 1,
-      source_cost: 4,
-      source_installs: 7,
-    }, 
-    {
-      name: "bigo",
-      tracker_link: tech_list.getRange(2,6).getValue(),
-      source_link: tech_list.getRange(4,6).getValue(),
-      tracker_campaign_name: 1,
-      tracker_convertions: 2,
-      tracker_revenue: 3,
-      source_campaign_name: 2,
-      source_cost: 4,
-      source_installs: 7,
-    }
-  ]
   console.log("..env created")
   return {
-    raw_data_env: raw_data_env,
+    errors: source_data.errors,
+    raw_data_env: source_data.data,
     validation_data: validation_data
     }
 }
 
-function getValidationData(tech_list) {
+function getSourceData(source_sheet){
+  const last_row = source_sheet.getLastRow()
+  var data = []
+  var errors = []
+  for (var i = 2; i <= last_row; i++){
+    const values = source_sheet.getRange(i,1,1,9).getValues()[0]
+    try {
+      SpreadsheetApp.openByUrl(values[7])
+      SpreadsheetApp.openByUrl(values[8])
+
+      data.push({
+        name: values[0],
+        tracker_campaign_name: values[1],
+        tracker_convertions: values[2],
+        tracker_revenue: values[3],
+        source_campaign_name: values[4],
+        source_installs: values[5],
+        source_cost: values[6],
+        source_link: values[7],
+        tracker_link: values[8]
+      })
+    } catch (e) {
+      errors.push(`${values[0]}: incorrect spreadsheet links`)
+    }
+  }
+  return { data: data, errors: errors }
+}
+
+function getValidationData(settings_sheets) {
+  const apps_list = settings_sheets.getSheetByName("Apps");
+  const apps_last_row = apps_list.getLastRow();
+  const regions_list = settings_sheets.getSheetByName("Regions");
+  const regions_last_row = regions_list.getLastRow();
   var apps = []
   var regions = []
-  const app_list = tech_list.getRange(2,2,100,1).getValues()
-  const region_list = tech_list.getRange(2,3,100,1).getValues()
+  const app_list = apps_list.getRange(1,1,apps_last_row,1).getValues()
+  const region_list = regions_list.getRange(1,1,regions_last_row,1).getValues()
   
   app_list.forEach(app => {
     if(app[0].length > 0) {
@@ -67,7 +64,7 @@ function getValidationData(tech_list) {
   })
   
   const validation_data = {
-    agent: tech_list.getRange(2,1).getValue(),
+    agent: settings_sheets.getSheetByName("Agent").getRange(1,1).getValue(),
     apps: apps,
     regions: regions
   }
