@@ -1,6 +1,5 @@
-
 .back {
-  background: #e2e2e2;
+  background: #fff;
   width: 100%;
   position: absolute;
   top: 0;
@@ -8,20 +7,13 @@
 }
 
 .div-center {
-  width: 700px;
-  height: 90%;
-  background-color: #fff;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 700px;
+  height: 80%;
+  background-color: #fff; 
+  margin: 5% auto 10% auto;
   overflow: auto;
   padding: 1em 2em;
-  border-bottom: 2px solid #ccc;
+  box-shadow: 0 0 50px #ccc;
   display: table;
 }
 
@@ -36,6 +28,10 @@ div.content {
   margin-bottom: 10px;
   margin-top: 15px;
   width: 100%;
+}
+
+.sources {
+  padding-top: 3%;
 }
 
 .section-title {
