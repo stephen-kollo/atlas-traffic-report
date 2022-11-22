@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    
+    <?!= includeExternalFile("index.css") ?>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js" ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" >
+    
+  </head>
+  <body>
+    <div class="back">
+      <div class="div-center">
+        <div id="sources"></div>
+          <h1 style="text-align: center;">Atlas Traffic Report</h1>
+          <div class="line"></div>
+          <div>
+            <?!= createSourceLinkForm() ?>
+            <?!= createAdvancedSettingsForm()?>
+            <br>
+          </div>
+
+          <input style="margin-top: 20px;" type="button" value="Create Report" class="btn btn-success btn-lg btn-block" id='button' data-toggle="modal" data-target="#report-modal"/>
+          
+          <div class="modal fade" id="report-modal" tabindex="-1" role="dialog" aria-labelledby="report-modalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="report-modalLabel">Traffic Report</h5>
+                </div>
+                <div id="create-report-modal-body" style="height: 200px;" class="modal-body">
+                  <div style="display: none;" id="report-created">
+                    <p id="processing-status" style="color: gray;">Report successfully created 🎉</p>
+                    <p id="processing-errors-report" style="color: grey; font-size: 12px;"><strong>Processing errors:</strong><br>none</p>
+                  </div>
+                  <div id="loading-animation" style="margin-top: 30px; margin-bottom: 30px;">
+                    <div class="d-flex justify-content-center m-3">
+                      <div style="width: 50px; height: 50px;" class="spinner-border text-primary" role="status" >
+                        <span class="sr-only"></span>
+                      </div>
+                    </div>
+                    <p style="text-align: center; color: grey; font-size: 12px; margin-bottom: 0px; padding-bottom:0px;">Creating traffic report...</p>
+                    <p style="text-align: center; color: grey; font-size: 12px;">Please do not close the window</p>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button id="open-report-button" class="btn btn-secondary" onclick="#" type="button" disabled>
+                    <span class="sr-only">Open Report</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        <br>
+
+        <script>
+          // CLICK HANDLERS
+
+          // CREATE REPORT BUTTON
+          document.getElementById('button').addEventListener('click', () => {
+            google.script.run
+              .withSuccessHandler(displayReport)
+              .withFailureHandler(displayReportError)
+              .createTrafficReport()
+          })
+
+          function displayReport(res){
+            document.getElementById('open-report-button').addEventListener('click', () => {
+              document.getElementById('open-report-button').disabled = true;
+              parent.open(res.url)
+            })
+            document.getElementById("open-report-button").classList.remove('btn-secondary');
+            document.getElementById("open-report-button").classList.add('btn-primary');
+            document.getElementById('loading-animation').style.display = "none"
+            document.getElementById('report-created').style.display = "inline"
+            document.getElementById('open-report-button').disabled = false;
+            if(res.errors.length > 0) {
+              var errors = ""
+              res.errors.forEach(err => {
+                errors += `${err}<br>`
+              })
+              document.getElementById("processing-errors-report").innerHTML = (`<b>Processing errors:</b><br>${errors}`)
+            }
+          }
+          
+          function displayReportError(err) {
+            document.getElementById('loading-animation').style.display = "none"
+            document.getElementById('report-created').style.display = "inline"
+            document.getElementById('open-report-button').disabled = false;    
+            document.getElementById("processing-status").innerHTML = 'Something went wrong 🧐'
+            document.getElementById("processing-errors-report").innerHTML = (`<b>Processing errors:</b><br>${err}`)
+            
+          }
+          
+          var source_save_changes_buttons = document.getElementsByClassName('source-save-changes-button');
+          for(var i = 0; i < source_save_changes_buttons.length; i++) {
+            (function(index) {
+              source_save_changes_buttons[index].addEventListener("click", function() {
+                sourceSaveChangesButtonsHandler(index)
+              })
+            })(i);
+          }
+
+          var regions_item_buttons = document.getElementsByClassName('regions-item-button');
+          for(var i = 0; i < regions_item_buttons.length; i++) {
+            (function(index) {
+              regions_item_buttons[index].addEventListener("click", function() {
+                regionsItemButtonsHandler(index)
+              })
+            })(i);
+          }
+
+          var apps_item_buttons = document.getElementsByClassName('apps-item-button');
+          for(var i = 0; i < apps_item_buttons.length; i++) {
+            (function(index) {
+              apps_item_buttons[index].addEventListener("click", function() {
+                appsItemButtonsHandler(index)
+              })
+            })(i);
+          }
+
+          var show_settings_buttons = document.getElementsByClassName('show-settings-button');
+          for(var i = 0; i < show_settings_buttons.length; i++) {
+            (function(index) {
+              show_settings_buttons[index].addEventListener("click", function() {
+                advancedSettingsHandler(index)
+              })
+            })(i);
+          }
+
+          function sourceSaveChangesButtonsHandler(id) {
+            const source_settings = {
+              id: id,
+              source_campaign_name: document.getElementById(`source-${id}-data-source-campaign-name`).value,
+              tracker_campaign_name: document.getElementById(`source-${id}-data-tracker-campaign-name`).value,
+              source_installs: document.getElementById(`source-${id}-data-source-installs`).value,
+              source_cost: document.getElementById(`source-${id}-data-source-cost`).value,
+              tracker_convertions: document.getElementById(`source-${id}-data-tracker-convertions`).value,
+              tracker_revenue: document.getElementById(`source-${id}-data-tracker-revenue`).value,
+              source_link: document.getElementById(`source-${id}-data-source-link`).value,
+              tracker_link: document.getElementById(`source-${id}-data-tracker-link`).value
+            }
+            console.log(source_settings)
+            google.script.run
+              .withSuccessHandler(displaySuccess)
+              .withFailureHandler(displayError)
+              .updateSourceSettings(source_settings)
+          }
+
+          function advancedSettingsHandler(id) {
+            const btn = document.getElementById(`source-${id}-settings-button`)
+            const table = document.getElementById(`source-${id}-settings`)
+            if (btn.value=="Show column numbers") {
+              btn.value = "Hide column numbers"
+              table.style.display="inline";
+            } else {
+              btn.value = "Show column numbers"
+              table.style.display="none";
+            }
+          }
+
+          function regionsItemButtonsHandler(id) {
+            const btn = document.getElementById(`regions-item-button-${id}`)
+            btn.remove()
+            google.script.run
+              .withSuccessHandler(displaySuccessDelete)
+              .withFailureHandler(displayError)
+              .deleteItemFromSettings(id, "Regions")
+          }
+
+          function appsItemButtonsHandler(id) {
+            const btn = document.getElementById(`apps-item-button-${id}`)
+            btn.remove()
+            google.script.run
+              .withSuccessHandler(displaySuccessDelete)
+              .withFailureHandler(displayError)
+              .deleteItemFromSettings(id, "Apps")
+          }
+
+          document.getElementById('apps-item-button-add').addEventListener('click', () => {
+            document.getElementById('apps-item-input').style.display = "inline"
+            document.getElementById('apps-item-input').focus();
+            document.getElementById('apps-item-button-add').style.display = "none"
+          })
+
+          document.getElementById('apps-item-input').addEventListener('focusout', () => {
+            google.script.run
+              .withSuccessHandler(displaySuccess)
+              .withFailureHandler(displayError)
+              .addItemsToSettings(document.getElementById('apps-item-input').value, "Apps")
+            document.getElementById('apps-item-input').style.display = "none"
+            document.getElementById('apps-item-button-add').style.display = "flex"
+          })
+
+          document.getElementById('regions-item-button-add').addEventListener('click', () => {
+            document.getElementById('regions-item-input').style.display = "inline"
+            document.getElementById('regions-item-input').focus();
+            document.getElementById('regions-item-button-add').style.display = "none"
+          })
+
+          document.getElementById('regions-item-input').addEventListener('focusout', () => {
+            google.script.run
+              .withSuccessHandler(displaySuccess)
+              .withFailureHandler(displayError)
+              .addItemsToSettings(document.getElementById('regions-item-input').value, "Regions")
+            document.getElementById('regions-item-input').style.display = "none"
+            document.getElementById('regions-item-button-add').style.display = "flex"
+          })
+
+          function displaySuccess(res) {
+            console.log(res)
+            window.open("https://script.google.com/macros/s/AKfycbxUz-JagEFB2euHp4PYwpWGKvRYvS728l9DDto3B745GcFYLc7SXTuysHMIup-ZRyn-fQ/exec",'_top');
+          }
+
+          function displaySuccessDelete(res) {
+            console.log(res)
+          }
+
+          function displayError(err) {
+            console.log(err)
+          }
+          
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
