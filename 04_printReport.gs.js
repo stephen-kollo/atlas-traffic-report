@@ -1,14 +1,9 @@
-function printReport(report) {
+function printReport(report, report_sheets) {
   console.log("------- Printing Report -------")
-  const general_report_list = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("General report");
-  const campaign_report_list = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Campaign report");
-  const errors_list = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Error report");
+  const general_report_list = report_sheets.getSheetByName("General report");
+  const campaign_report_list = report_sheets.getSheetByName("Campaign report");
+  const errors_list = report_sheets.getSheetByName("Error report");
   
-  clearList(general_report_list)
-  clearList(campaign_report_list)
-  clearList(errors_list)
-  console.log("..report sheets cleaned!")
-
   printTotals(report.totals, general_report_list)
   printRegions(report.regions, general_report_list)
   printApps(report.apps, general_report_list)
@@ -271,11 +266,4 @@ function styleErrorTable(list, range) {
     range.last_row - range.start_row,
     1
   ).setNumberFormat("$#,##0.00;$(#,##0.00)")
-}
-
-function clearList(list) {
-  const row = list.getLastRow() + 1
-  const column = list.getLastColumn() + 1
-  const range = list.getRange(1, 1, row, column)
-  range.deleteCells(SpreadsheetApp.Dimension.COLUMNS)
 }
