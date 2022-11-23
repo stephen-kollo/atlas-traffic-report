@@ -4,7 +4,7 @@ Connects tracker data and source data in case of no postback given<br>
 Groups advertising campaigns data by sources, apps, regions and sums values<br>
 
 # Concept
-<img src="./readme-slides/concept.png" style="width: 60%;"> 
+<img src="./readme-slides/concept.png"> 
 
 # Usage
 
