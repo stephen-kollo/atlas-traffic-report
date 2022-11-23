@@ -5,7 +5,7 @@ Connects application data and source data in the case of advertising third-party
 Groups advertising campaigns data by sources, apps, regions and sums values<br>
 
 # Concept
-<img src="./readme-slides/concept.png"> 
+<img src="./readme-slides/concept_schema.png"> 
 
 # Usage
 
