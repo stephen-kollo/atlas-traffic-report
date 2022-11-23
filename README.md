@@ -6,7 +6,8 @@ Sums
 # Concept
 <img src="./readme-slides/concept_description.png" style="width: 60%;"> 
 
-# Usage 
+# Campaign Naming
+To ensure the report works correctly, all advertising campaigns must be named according to the template
 
 <b>Campaign name tamplate:</b>
 AppName_Region_Agent_CustomField_AdAccount
