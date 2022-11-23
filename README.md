@@ -1,5 +1,5 @@
 # Atlas Traffic Report
-Google Sheets js automated traffic report for performance marketing agency<br>
+Google Apps Script traffic report for performance marketing agencies<br>
 Groups running advertising campaigns data by sources, apps, regions<br>
 Sums 
 
