@@ -14,6 +14,7 @@ Groups advertising campaigns data by sources, apps, regions and sums values<br>
 <br>
 Main View / Setting Source Data
 
+# Campaign Naming
 <br>
 <img src="./readme-slides/creating_report.png" style="width: 40%; display: inline;"> Create Report
 
