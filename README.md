@@ -3,8 +3,8 @@ Google Sheets js automated traffic report for performance marketing agency
 <br>
 
 <img src="./readme-slides/concept.png" style="width: 50%">
-<br>
 Processes data about running advertising campaigns by campaign name
+<img src="./readme-slides/description.png">
 
 <b>Campaign name tamplate:</b>
 AppName_Region_Agent_CustomField_AdAccount
@@ -16,5 +16,3 @@ AppName_Region_Agent_CustomField_AdAccount
 ❌ TikTok_MagicPic_AE_BRA_payout:1.4_SAMediaGroup009 <br>
 ❌ MagicPic.AE.BRA.payout:1.4.SAMediaGroup009 <br>
 ❌ AE_MagicPic_BRA_payout:1.4_SAMediaGroup009 <br>
-
-<img src="./readme-slides/description.png">
