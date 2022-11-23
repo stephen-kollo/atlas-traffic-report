@@ -8,7 +8,11 @@ Groups advertising campaigns data by sources, apps, regions and sums values<br>
 <img src="./readme-slides/concept_schema.png"> 
 
 # Usage
-<img src="./readme-slides/main_screen.png" style="width: 49%; display: flex;"> <img src="./readme-slides/source_settings.png" style="width: 49%; display: flex; margin-left:2%;"> <br>
+<div style="">
+<img src="./readme-slides/main_screen.png" style="width: 50%; display: flex;"> 
+<img src="./readme-slides/source_settings.png" style="width: 50%; display: flex;">
+</div>
+ <br>
 Main View / Setting Source Data
 
 <br>
