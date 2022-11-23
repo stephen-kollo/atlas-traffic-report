@@ -8,7 +8,7 @@ Groups advertising campaigns data by sources, apps, regions and sums values<br>
 
 # Usage
 <div style="display: flex;">
-  <img src="./readme-slides/main_screen.png" style="width: 49%;"> 
+  <img src="./readme-slides/main_screen.png" style="width: 49%;">
   <img src="./readme-slides/source_settings.png" style="width: 49%; margin:1%">
 </div>
 <br>
