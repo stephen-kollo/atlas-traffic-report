@@ -18,7 +18,7 @@ AppName_Region_Agent_CustomField_AdAccount
 
 <b>Cases:</b>
 <br>
-✅ MagicPic_AE_BRA_payout:1.4_SAMediaGroup009 <br>
-✅ MagicPic_AE_BRA_SAMediaGroup009 <br>
-❌ <strike>TikTok_</strike>MagicPic_AE_BRA_payout:1.4_SAMediaGroup009 <br>
-❌ <strike>AE_MagicPic</strike>_BRA_payout:1.4_SAMediaGroup009 <br>
+✅ ShadowRunner_AE_BRA_global_SAMediaGroup009 <br>
+✅ ShadowRunner_AE_BRA_SAMediaGroup009 <br>
+❌ <strike>TikTok_</strike>ShadowRunner_AE_BRA_global_SAMediaGroup009 <br>
+❌ <strike>AE_ShadowRunner</strike>_BRA_global_SAMediaGroup009 <br>
