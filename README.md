@@ -5,7 +5,7 @@ Google Apps Script traffic report for performance marketing agencies<br>
 Connects application data and source data in the case of advertising third-party applications without direct postback<br>
 Groups advertising campaigns data by sources, apps, regions and sums values<br>
 
-# Usage
+## Usage
 To start using report you need:
 - Campaign data from sources & apps put in separate Google Sheet with "Edit" access for everyone
 - All your campaigns named correctly (explained in Campaign Naming section)
@@ -36,3 +36,5 @@ AppName_Region_Agent_CustomField_AdAccount
 ✅ ShadowRunner_AE_BRA_SAMediaGroup009 <br>
 ❌ <strike>TikTok_</strike>ShadowRunner_AE_BRA_global_SAMediaGroup009 <br>
 ❌ <strike>AE_ShadowRunner</strike>_BRA_global_SAMediaGroup009 <br>
+
+## How it works
