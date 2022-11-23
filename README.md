@@ -10,7 +10,7 @@ To start using report you need:
 - Campaign data from sources & apps put in separate Google Sheet with "Edit" access for everyone
 - All your campaigns named correctly (explained in Campaign Naming section)
 
-## Interface
+### Interface
 To start using report simply link campaign data sheets by clicking on each source button in "Sources" section of the interface (✏Tiktok & ✏Bigo in given example)<br>
 <br>
 In pop-up menu set Google Sheets links and numbers of each column asked in menu (campaign names, convertions, revenue, installs and cost) to attach exact columns in your sheets<br>
@@ -19,13 +19,13 @@ When data sheets are linked, click on "Create Report" green button, it will open
 It will take 15-30 seconds to create report<br>
 When it is complete, click "Open Report" button to open report sheet<br>
 <br>
-## Report Sections
+### Report Sections
 Report is devided into 3 sections:
 - General Report
 - Campaign Report
 - Error Report
 
-## Campaign Naming
+### Campaign Naming
 To ensure the report works correctly, all advertising campaigns must be named according to the template
 
 <b>Campaign name tamplate:</b>
