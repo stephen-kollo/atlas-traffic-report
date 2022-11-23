@@ -5,13 +5,10 @@ Google Apps Script traffic report for performance marketing agencies<br>
 Connects application data and source data in the case of advertising third-party applications without direct postback<br>
 Groups advertising campaigns data by sources, apps, regions and sums values<br>
 
-
-# Usage
-
 <img align="left" src="./readme-slides/main_screen.png" style="width: 50%; display: flex;">
 <img align="left" src="./readme-slides/source_settings.png" style="width: 50%; display: flex;">
-
-<br>
+# Usage
+Hey ho Lets go
 Main View / Setting Source Data
 <br>
 # Campaign Naming
