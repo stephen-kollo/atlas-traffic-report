@@ -1,8 +1,9 @@
 # traffic-report
 Google Sheets js automated traffic report for performance marketing agency
 <br>
-Processes data about running advertising campaigns by campaign name
+Processes running advertising campaigns data by campaign name
 <img src="./readme-slides/concept.png" style="width: 50%">
+<img src="./readme-slides/description.png" style="width: 50%">
 
 Processes data about running advertising campaigns by campaign name
 
