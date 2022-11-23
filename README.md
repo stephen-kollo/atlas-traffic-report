@@ -12,10 +12,11 @@ Groups advertising campaigns data by sources, apps, regions and sums values<br>
 
 <br>
 Main View / Setting Source Data
+<img src="./readme-slides/creating_report.png" style="width: 40%; display: inline;"> Create Report
 
 # Campaign Naming
 <br>
-<img src="./readme-slides/creating_report.png" style="width: 40%; display: inline;"> Create Report
+
 
 # Campaign Naming
 To ensure the report works correctly, all advertising campaigns must be named according to the template
