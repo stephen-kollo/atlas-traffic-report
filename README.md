@@ -11,7 +11,8 @@ To start using report you need:
 - All your campaigns named correctly (explained in Campaign Naming section)
 
 ## Interface
-To start using report simply link campaign data sheets by clicking on each source button in "Sources" section of the interface (✏Tiktok & ✏Bigo in given example)<br>
+To start using report simply link campaign data sheets by clicking on each source button in "Sources" section of the interface<br>
+(✏Tiktok & ✏Bigo in given example)<br>
 <br>
 In pop-up menu set Google Sheets links and numbers of each column asked in menu (campaign names, convertions, revenue, installs and cost) to attach exact columns in your sheets<br>
 <br>
