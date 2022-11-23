@@ -1,8 +1,8 @@
-# Atlas Traffic Report
+# Third-Party Apps Traffic Report
 <img src="./readme-slides/concept_schema.png"> 
 Google Apps Script traffic report for performance marketing agencies<br>
 
-Connects application data and source data in the case of advertising third-party applications without direct postback<br>
+Connects application data and source data in the case of advertising third-party apps without direct postback<br>
 Groups advertising campaigns data by sources, apps, regions and sums values<br>
 
 ## Usage
