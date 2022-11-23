@@ -6,8 +6,6 @@ Connects application data and source data in the case of advertising third-party
 Groups advertising campaigns data by sources, apps, regions and sums values<br>
 
 # Usage
-<img align="left" src="./readme-slides/main_screen.png" style="width: 50%;">
-<img align="left" src="./readme-slides/source_settings.png" style="width: 50%;">
 
 ## Main
 To start using report simply set data from sources an apps to Google Sheets and link these sheets by clicking on each source button in "Sources" section of the interface (Tiktok & Bigo in given example)<br>
