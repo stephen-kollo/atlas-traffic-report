@@ -13,10 +13,6 @@ Hey ho Lets go
 Main View / Setting Source Data
 <br>
 # Campaign Naming
-<br>
-
-
-# Campaign Naming
 To ensure the report works correctly, all advertising campaigns must be named according to the template
 
 <b>Campaign name tamplate:</b>
