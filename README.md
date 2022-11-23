@@ -7,10 +7,10 @@ Groups advertising campaigns data by sources, apps, regions and sums values<br>
 
 
 # Usage
-<div>
-<img align="left" src="./readme-slides/main_screen.png" style="width: 49%;">
-<img align="right" src="./readme-slides/source_settings.png" style="width: 49%;">
-</div>
+
+<img src="./readme-slides/main_screen.png" style="width: 49%; display:flex;">
+<img src="./readme-slides/source_settings.png" style="width: 49%;">
+
 <br>
 Main View / Setting Source Data
 
