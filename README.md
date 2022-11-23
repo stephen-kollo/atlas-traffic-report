@@ -17,5 +17,4 @@ AppName_Region_Agent_CustomField_AdAccount
 ✅ MagicPic_AE_BRA_payout:1.4_SAMediaGroup009 <br>
 ✅ MagicPic_AE_BRA_SAMediaGroup009 <br>
 ❌ <strike>TikTok_</strike>MagicPic_AE_BRA_payout:1.4_SAMediaGroup009 <br>
-❌ MagicPic<strike>.</strike>AE<strike>.</strike>BRA<b>.</b>payout:1.4<strike>.</strike>SAMediaGroup009 <br>
 ❌ <strike>AE_MagicPic</strike>_BRA_payout:1.4_SAMediaGroup009 <br>
