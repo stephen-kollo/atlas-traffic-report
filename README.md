@@ -1,10 +1,8 @@
-# Traffic Report
-Google Sheets js automated traffic report for performance marketing agency
-<br>
+# Concept
 <img src="./readme-slides/concept.png" style="width: 60%;"> 
 <img src="./readme-slides/description.png" style="width: 60%;">
-
-Groups running advertising campaigns data by sources, apps, regions
+Google Sheets js automated traffic report for performance marketing agency<br>
+Groups running advertising campaigns data by sources, apps, regions<br>
 Sums 
 
 # Usage 
