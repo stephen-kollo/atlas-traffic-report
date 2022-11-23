@@ -10,8 +10,9 @@ Processes data about running advertising campaigns by campaign name
 AppName_Region_Agent_CustomField_AdAccount
 
 <b>Cases:</b>
-✅ MagicPic_AE_BRA_payout:1.4_SAMediaGroup009
-✅ MagicPic_AE_BRA_SAMediaGroup009
-❌ TikTok_MagicPic_AE_BRA_payout:1.4_SAMediaGroup009
-❌ MagicPic.AE.BRA.payout:1.4.SAMediaGroup009
-❌ AE_MagicPic_BRA_payout:1.4_SAMediaGroup009
+<br>
+✅ MagicPic_AE_BRA_payout:1.4_SAMediaGroup009 <br>
+✅ MagicPic_AE_BRA_SAMediaGroup009 <br>
+❌ TikTok_MagicPic_AE_BRA_payout:1.4_SAMediaGroup009 <br>
+❌ MagicPic.AE.BRA.payout:1.4.SAMediaGroup009 <br>
+❌ AE_MagicPic_BRA_payout:1.4_SAMediaGroup009 <br>
