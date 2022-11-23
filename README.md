@@ -15,12 +15,15 @@ To start using report simply link campaign data sheets by clicking on each sourc
 <br>
 In pop-up menu set Google Sheets links and numbers of each column asked in menu (campaign names, convertions, revenue, installs and cost) to attach exact columns in your sheets<br>
 <br>
-When data sheets linked, click on "Create Report" green button, it will open loading pop-up<br>
+When data sheets are linked, click on "Create Report" green button, it will open loading pop-up<br>
 It will take 15-30 seconds to create report<br>
 When it is complete, click "Open Report" button to open report sheet<br>
 <br>
 ## Report Sections
-Report is devided into 3 sections
+Report is devided into 3 sections:
+- General Report
+- Campaign Report
+- Error Report
 
 ## Campaign Naming
 To ensure the report works correctly, all advertising campaigns must be named according to the template
