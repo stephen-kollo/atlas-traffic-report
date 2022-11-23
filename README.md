@@ -10,15 +10,20 @@ Groups advertising campaigns data by sources, apps, regions and sums values<br>
 <img align="left" src="./readme-slides/source_settings.png" style="width: 50%;">
 
 ## Main
-To start using report simply set data from Sources an Apps to Google Sheets and link these Sheets by clicking on each Source Button in "Sources" section of the interface (Tiktok & Bigo in given example)<br>
+To start using report simply set data from sources an apps to Google Sheets and link these sheets by clicking on each source button in "Sources" section of the interface (Tiktok & Bigo in given example)<br>
 ✏Tiktok<br>
 ✏️Bigo<br>
 <br>
-In pop-up menu set Google Sheets links and numbers of each Column in menu to attach exact Columns in your Sheets<br>
-This menu is shown in the screenshot below.
-
-Main View / Setting Source Data
+In pop-up menu set Google Sheets links and numbers of each column in menu to attach exact columns in your sheets<br>
+This menu is shown in the screenshot below<br>
 <br>
+When data sheets linked, click on "Create Report" green button, it will open loading pop-up<br>
+It will take 15-30 seconds to create report<br>
+When it is complete, click "Open Report" button to open report sheet<br>
+<br>
+## Report Sections
+Report is devided into 3 sections
+
 ## Campaign Naming
 To ensure the report works correctly, all advertising campaigns must be named according to the template
 
