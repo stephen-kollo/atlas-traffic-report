@@ -14,7 +14,8 @@ To start using report simply set data from Sources an Apps to Google Sheets and 
 ✏Tiktok<br>
 ✏️Bigo<br>
 <br>
-In pop-up menu set Google Sheets links and numbers of each Column in menu to attach exact Columns in your Sheets 
+In pop-up menu set Google Sheets links and numbers of each Column in menu to attach exact Columns in your Sheets<br>
+That menu is showed on the second screen below
 
 Main View / Setting Source Data
 <br>
