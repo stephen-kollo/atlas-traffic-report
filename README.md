@@ -10,9 +10,9 @@ Groups advertising campaigns data by sources, apps, regions and sums values<br>
 <img align="left" src="./readme-slides/source_settings.png" style="width: 50%;">
 
 ## Main
-To start using report simply set data from Sources an Apps to Google Sheets and link these Sheets by clicking on each Source Button in "Sources" section of the interface <br>
-<< ✏Tiktok >><br>
-<< ✏️Bigo >><br>
+To start using report simply set data from Sources an Apps to Google Sheets and link these Sheets by clicking on each Source Button in "Sources" section of the interface (Tiktok & Bigo in given example)<br>
+✏Tiktok<br>
+✏️Bigo<br>
 <br>
 In pop-up menu set Google Sheets links and numbers of each Column in menu to attach exact Columns in your Sheets 
 
