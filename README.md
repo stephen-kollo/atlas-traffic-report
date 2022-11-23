@@ -1,7 +1,7 @@
 # Atlas Traffic Report
 Google Apps Script traffic report for performance marketing agencies<br>
 Connects tracker data and source data in case of no postback given<br>
-Groups running advertising campaigns data by sources, apps, regions and sums values<br>
+Groups advertising campaigns data by sources, apps, regions and sums values<br>
 
 # Concept
 <img src="./readme-slides/concept_description.png" style="width: 60%;"> 
