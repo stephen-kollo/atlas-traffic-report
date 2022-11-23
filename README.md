@@ -8,6 +8,7 @@ Groups advertising campaigns data by sources, apps, regions and sums values<br>
 <img src="./readme-slides/concept_schema.png"> 
 
 # Usage
+<img src="./readme-slides/main_screen.png" style="width: 60%; display: flex;"> Hello 
 <img src="./readme-slides/source_settings.png" style="width: 60%; display: flex;"> Hello 
 
 # Campaign Naming
