@@ -8,8 +8,9 @@ Groups advertising campaigns data by sources, apps, regions and sums values<br>
 <img src="./readme-slides/concept_schema.png"> 
 
 # Usage
-<img src="./readme-slides/main_screen.png" style="width: 60%; display: flex;"> Hello 
-<img src="./readme-slides/source_settings.png" style="width: 60%; display: flex;"> Hello 
+<img src="./readme-slides/main_screen.png" style="width: 60%; display: flex;"> Main View 
+<img src="./readme-slides/source_settings.png" style="width: 60%; display: flex;"> Set Source Settings 
+<img src="./readme-slides/creating_report.png" style="width: 60%; display: flex;"> Create Report
 
 # Campaign Naming
 To ensure the report works correctly, all advertising campaigns must be named according to the template
