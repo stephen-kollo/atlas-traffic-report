@@ -1,3 +1,4 @@
+<style>
 .back {
   background: #fff;
   width: 100%;
@@ -7,10 +8,10 @@
 }
 
 .div-center {
-  max-width: 700px;
-  height: 80%;
+  max-width: 900px;
+  height: 100%;
   background-color: #fff; 
-  margin: 5% auto 10% auto;
+  margin: auto;
   overflow: auto;
   padding: 1em 2em;
   box-shadow: 0 0 50px #ccc;
@@ -51,3 +52,4 @@ div.content {
   display: none;
   margin-bottom: 20px;
 }
+</style>
