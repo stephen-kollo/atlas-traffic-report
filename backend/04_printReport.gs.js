@@ -25,12 +25,12 @@ function printTotals(totlas, report_list) {
   totlas.forEach(source => {
     data_array.push([
       source.source_name.toString(), 
-      source.total_convertions.toString(),
-      source.total_revenue.toString(),
-      source.total_installs.toString(),
-      source.total_cost.toString(),
-      source.total_profit.toString(),
-      source.total_roi.toString()
+      source.total_convertions,
+      source.total_revenue,
+      source.total_installs,
+      source.total_cost,
+      source.total_profit,
+      source.total_roi
     ])
   })
   var last_row = report_list.getLastRow()
@@ -58,12 +58,12 @@ function printRegions(region_data, report_list) {
     source.regions.forEach(region => {
       data_array.push([
         region.region.toString(), 
-        region.convertions.toString(),
-        region.revenue.toString(),
-        region.installs.toString(),
-        region.cost.toString(),
-        region.profit.toString(),
-        region.roi.toString()
+        region.convertions,
+        region.revenue,
+        region.installs,
+        region.cost,
+        region.profit,
+        region.roi
       ])
     })
     var last_row = report_list.getLastRow()
@@ -92,12 +92,12 @@ function printApps(app_data, report_list) {
     source.apps.forEach(app => {
       data_array.push([
         app.app.toString(), 
-        app.convertions.toString(),
-        app.revenue.toString(),
-        app.installs.toString(),
-        app.cost.toString(),
-        app.profit.toString(),
-        app.roi.toString()
+        app.convertions,
+        app.revenue,
+        app.installs,
+        app.cost,
+        app.profit,
+        app.roi
       ])
     })
     var last_row = report_list.getLastRow()
@@ -134,12 +134,12 @@ function printCombinedCampaingData(report_data, report_list) {
       data_array.push([
         unit.tags.app.toString(), 
         unit.tags.region.toString(), 
-        unit.convertions.toString(),
-        revenue.toString(),
-        unit.installs.toString(),
-        cost.toString(),
-        (revenue - cost).toString(),
-        ((revenue - cost) / cost).toString()
+        unit.convertions,
+        revenue,
+        unit.installs,
+        cost,
+        (revenue - cost),
+        ((revenue - cost) / cost)
       ])
     })
 
@@ -179,10 +179,10 @@ function printErrors(report_data, report_list) {
           error.campaign_name.error.error_name.toString(), 
           location,
           error.campaign_name.error.campaign_name.toString(),  
-          error.convertions.toString(),
-          error.revenue.toString(),
-          error.installs.toString(),
-          error.cost.toString(),
+          error.convertions,
+          error.revenue,
+          error.installs,
+          error.cost,
         ])
       })
 
