@@ -13,14 +13,13 @@
     <div class="back">
       <div class="div-center">
         <div id="sources"></div>
-          <h1 style="text-align: center;">Atlas Traffic Report</h1>
+          <h1 style="text-align: center;">Traffic Report</h1>
           <div class="line"></div>
           <div>
             <?!= createSourceLinkForm() ?>
             <?!= createAdvancedSettingsForm()?>
-            <br>
           </div>
-
+          
           <input style="margin-top: 20px;" type="button" value="Create Report" class="btn btn-success btn-lg btn-block" id='button' data-toggle="modal" data-target="#report-modal"/>
           
           <div class="modal fade" id="report-modal" tabindex="-1" role="dialog" aria-labelledby="report-modalLabel" aria-hidden="true">
@@ -87,7 +86,7 @@
           function displayReportError(err) {
             document.getElementById('loading-animation').style.display = "none"
             document.getElementById('report-created').style.display = "inline"
-            document.getElementById('open-report-button').disabled = false;    
+            document.getElementById('open-report-button').disabled = false;  
             document.getElementById("processing-status").innerHTML = 'Something went wrong 🧐'
             document.getElementById("processing-errors-report").innerHTML = (`<b>Processing errors:</b><br>${err}`)
             
