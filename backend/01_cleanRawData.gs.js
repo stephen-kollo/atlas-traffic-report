@@ -21,8 +21,8 @@ function getRawData(sources_docs_env) {
     for(var i = 0; i < tracker_list_last_row; i++) {
       tracker_data.push({
         campaign_name: tracker_campaign_names[i][0],
-        convertions: tracker_convertions[i][0],
-        revenue: tracker_revenue[i][0],
+        convertions: Number(tracker_convertions[i][0]),
+        revenue: Number(tracker_revenue[i][0]),
         installs: 0,
         cost: 0
       })
@@ -38,8 +38,8 @@ function getRawData(sources_docs_env) {
         campaign_name: source_campaign_names[i][0],
         convertions: 0,
         revenue: 0,
-        installs: source_installs[i][0],
-        cost: source_cost[i][0]
+        installs: Number(source_installs[i][0]),
+        cost: Number(source_cost[i][0])
       })
     }
 
