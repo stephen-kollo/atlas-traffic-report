@@ -54,7 +54,6 @@ function createReportBlank() {
   return doc
 }
 
-
 function addItemsToSettings(items, listName) {
   const list = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(listName);
   const row = list.getLastRow() + 1
@@ -88,5 +87,12 @@ function updateSourceSettings(settings) {
     settings.tracker_link
   ]]
   list.getRange(row,2,1,8).setValues(data)
+  return true
+}
+
+function moveToPublicFolder(doc, dir) {
+  var file = DriveApp.getFileById(doc.getId());
+  var folder = DriveApp.getFolderById(dir);
+  file.moveTo(folder);
   return true
 }
