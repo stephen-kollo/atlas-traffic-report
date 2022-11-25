@@ -22,6 +22,7 @@ In pop-up menu set Google Sheets links and numbers of each column asked in menu 
 When data sheets are linked, click on "Create Report" green button, it will open loading pop-up<br>
 It will take 15-30 seconds to create report<br>
 When it is complete, click "Open Report" button to open report sheet<br>
+
 ### Report Sections
 Report is devided into 3 sections:
 - General Report <br>
