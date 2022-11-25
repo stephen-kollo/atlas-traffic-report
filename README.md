@@ -21,11 +21,11 @@ When it is complete, click "Open Report" button to open report sheet<br>
 ### Report Sections
 Report is devided into 3 sections:
 - General Report <br>
-Total sum of convertions, revenue, installs & cost by each source
+(total sum of convertions, revenue, installs & cost by each source)
 - Campaign Report<br>
-Sum of each unique segment (source, app, region)
+(sum of each unique segment: source, app & region)
 - Error Report<br>
-Errors related to incorrect campaign naming
+(errors related to incorrect campaign naming)
 
 ### Campaign Naming
 To ensure the report works correctly, all advertising campaigns must be named according to the template
