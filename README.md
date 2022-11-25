@@ -6,7 +6,7 @@ Connects application data and source data in the case of advertising third-party
 Groups advertising campaigns data by sources, apps, regions and sums values<br>
 
 <a href="https://script.google.com/macros/s/AKfycbxUz-JagEFB2euHp4PYwpWGKvRYvS728l9DDto3B745GcFYLc7SXTuysHMIup-ZRyn-fQ/exec">Try Demo via this link</a>
-<br>Everything is already set up. You can make any changes, sample will automaticly reset to default every 30 minutes
+<br>For demo everything is already set up. You can make any changes, press "Demo: reset to default" if get stuck
 
 ## Usage
 To start using report you need:
