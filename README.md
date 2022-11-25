@@ -20,7 +20,7 @@ It will take 15-30 seconds to create report<br>
 When it is complete, click "Open Report" button to open report sheet<br>
 ### Report Sections
 Report is devided into 3 sections:
-- General Report
+- General Report <br>
 Hello
 - Campaign Report
 - Error Report
