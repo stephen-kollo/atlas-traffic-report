@@ -1,5 +1,5 @@
 # <a href="https://script.google.com/macros/s/AKfycbxUz-JagEFB2euHp4PYwpWGKvRYvS728l9DDto3B745GcFYLc7SXTuysHMIup-ZRyn-fQ/exec">Try Demo via this link</a>
-<br>For demo everything is already set up. You can make any changes, press "Demo: reset all to default" if get stuck
+For demo everything is already set up. You can make any changes, press "Demo: reset all to default" if get stuck
 
 # Third-Party Apps Traffic Report
 <img src="./readme-slides/concept_schema.png"> 
