@@ -39,5 +39,3 @@ AppName_Region_Agent_CustomField_AdAccount
 ✅ ShadowRunner_AE_BRA_SAMediaGroup009 <br>
 ❌ <strike>TikTok_</strike>ShadowRunner_AE_BRA_global_SAMediaGroup009 <br>
 ❌ <strike>AE_ShadowRunner</strike>_BRA_global_SAMediaGroup009 <br>
-
-## How it works
