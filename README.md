@@ -1,4 +1,4 @@
-# <a href="https://script.google.com/macros/s/AKfycbxUz-JagEFB2euHp4PYwpWGKvRYvS728l9DDto3B745GcFYLc7SXTuysHMIup-ZRyn-fQ/exec">Try Demo via this link</a>
+# <a href="https://script.google.com/macros/s/AKfycbxUz-JagEFB2euHp4PYwpWGKvRYvS728l9DDto3B745GcFYLc7SXTuysHMIup-ZRyn-fQ/exec">Try Demo with this link</a>
 Demo takes tamplate dataset. You can make any changes, press "Demo: reset all to default" button if got stuck
 
 # Third-Party Apps Traffic Report
